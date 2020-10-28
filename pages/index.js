@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Box from '../components/Box/Box';
+import Camera from '../components/Camera/Camera';
 import { Canvas } from 'react-three-fiber';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
                     <ambientLight intensity={0.5} />
                     <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                     <pointLight position={[-10, -10, -10]} />
+                    <Camera />
                     <Box position={[0, 0, 0]} />
                 </Canvas>
             </main>
