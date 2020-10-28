@@ -7,6 +7,7 @@ export default function Home() {
         <div className="container">
             <Head>
                 <title>Hallowbie!</title>
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
             <main>
                 <Canvas style={{ height: '100vh' }}>
