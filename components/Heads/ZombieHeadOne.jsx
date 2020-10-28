@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useLoader } from 'react-three-fiber';
 let GLTFLoader;
 
-const Skull = () => {
+const ZombieHeadOne = () => {
     GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader;
 
     const zombieHeadRef = useRef();
@@ -10,7 +10,7 @@ const Skull = () => {
     const { nodes } = useLoader(GLTFLoader, '/models/ZombieHead.glb');
 
     return (
-        <group ref={zombieHeadRef}>
+        <group ref={zombieHeadRef} position={[0, 0, 0]}>
             <mesh
                 visible
                 geometry={nodes['Base'].geometry}
@@ -51,4 +51,4 @@ const Skull = () => {
     );
 };
 
-export default Skull;
+export default ZombieHeadOne;

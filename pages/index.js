@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { Suspense } from 'react';
 import ZombieHeadOne from '../components/Heads/ZombieHeadOne';
+import ZombieHeadTwo from '../components/Heads/ZombieHeadTwo';
+import ZombieBodyOne from '../components/Bodies/ZombieBodyOne';
+import ZombieBodyTwo from '../components/Bodies/ZombieBodyTwo';
 import { Canvas } from 'react-three-fiber';
 import dynamic from 'next/dynamic';
 
@@ -21,6 +24,9 @@ export default function Home() {
                     <Camera />
                     <Suspense fallback={null}>
                         <ZombieHeadOne />
+                        <ZombieHeadTwo />
+                        <ZombieBodyOne />
+                        <ZombieBodyTwo />
                     </Suspense>
                 </Canvas>
             </main>
