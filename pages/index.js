@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import React from 'react';
+import Box from '../components/Box/Box';
+import { Canvas } from 'react-three-fiber';
 
 export default function Home() {
     return (
@@ -8,9 +9,12 @@ export default function Home() {
                 <title>Hallowbie!</title>
             </Head>
             <main>
-                <h1 className="title">
-                    <span>Hallowbie! Halloween!</span>
-                </h1>
+                <Canvas style={{ height: '100vh' }}>
+                    <ambientLight intensity={0.5} />
+                    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                    <pointLight position={[-10, -10, -10]} />
+                    <Box position={[0, 0, 0]} />
+                </Canvas>
             </main>
         </div>
     );
