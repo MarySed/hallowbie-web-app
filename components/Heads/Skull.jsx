@@ -1,12 +1,9 @@
-import React, { useRef, useState } from 'react';
-import { useLoader, useFrame } from 'react-three-fiber';
+import React from 'react';
+import { useLoader } from 'react-three-fiber';
 let GLTFLoader;
 
-// this works! Or was working before the mystery bug...
 const Skull = () => {
     GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader;
-
-    const skullRef = useRef();
 
     const { nodes } = useLoader(GLTFLoader, '/models/skull.glb');
 
