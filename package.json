@@ -10,6 +10,7 @@
         "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
     },
     "dependencies": {
+        "drei": "^1.5.7",
         "install": "^0.13.0",
         "next": "10.0.0",
         "react": "17.0.1",
