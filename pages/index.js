@@ -4,14 +4,16 @@ import ZombieHeadOne from '../components/Heads/ZombieHeadOne';
 import ZombieHeadTwo from '../components/Heads/ZombieHeadTwo';
 import ZombieBodyOne from '../components/Bodies/ZombieBodyOne';
 import ZombieBodyTwo from '../components/Bodies/ZombieBodyTwo';
+import Layout from '../components/layout';
 import { Canvas } from 'react-three-fiber';
 import dynamic from 'next/dynamic';
+import styles from './index.module.css';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
 export default function Home() {
     return (
-        <div className="container">
+        <Layout>
             <Head>
                 <title>Hallowbie!</title>
                 <link rel="shortcut icon" href="/favicon.ico" />
@@ -29,7 +31,13 @@ export default function Home() {
                         <ZombieBodyTwo />
                     </Suspense>
                 </Canvas>
+                <div className={styles.question}>
+                    <div>QUESTION 1!!!!</div>
+                    <div>PICK A FAVORITE HALLOWEEN CANDY</div>
+                    <div>- CHOCOLATE</div>
+                    <div>- BRAINS</div>
+                </div>
             </main>
-        </div>
+        </Layout>
     );
 }
