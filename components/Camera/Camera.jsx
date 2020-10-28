@@ -10,7 +10,7 @@ const Camera = () => {
         gl: { domElement },
     } = useThree();
 
-    const cameraRef = useRef();
+    const cameraRef = useRef(null);
 
     useFrame(() => {
         if (cameraRef.current) {

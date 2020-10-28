@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Box from '../components/Box/Box';
-import Camera from '../components/Camera/Camera';
 import { Canvas } from 'react-three-fiber';
+import dynamic from 'next/dynamic';
+
+const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
 export default function Home() {
     return (
