@@ -1,5 +1,4 @@
-/* Will move to modal component in next PR */
-.question {
+.quiz-container {
     position: absolute;
     text-align: center;
     margin-left: auto;
@@ -7,5 +6,5 @@
     top: 50vh;
     left: 0px;
     right: 0px;
-    width: 300px;
+    /* width: 300px; */
 }

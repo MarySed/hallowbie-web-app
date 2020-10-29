@@ -1,0 +1,44 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,700;1,500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Arvo&display=swap');
+
+.quiz-header {
+    font-family: 'Creepster', serif;
+    font-size: 100px;
+    color: beige;
+    animation: redShadow 4500ms ease infinite;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: red;
+    margin-top: -20px;
+}
+
+.quiz-button {
+    font-family: 'Arvo', serif;
+    width: 20vw;
+    border: 3px solid crimson;
+    color: crimson;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.quiz-button:hover {
+    box-shadow: 3px 7px 5px rgba(251, 12, 12, 0.9);
+    transition: ease-in 0.35s;
+    color: red;
+    border-color: red;
+}
+
+@keyframes redShadow {
+    0% {
+        text-shadow: 3px 7px 5px rgba(251, 12, 12, 0.9);
+    }
+    50% {
+        text-shadow: 5px 6px 6px rgba(251, 12, 12, 0.6);
+    }
+    100% {
+        text-shadow: 4px 8px 6.5px rgba(251, 12, 12, 1);
+    }
+}

@@ -10,43 +10,8 @@ const ZombieHeadOne = () => {
     const { nodes } = useLoader(GLTFLoader, '/models/ZombieHead.glb');
 
     return (
-        <group ref={zombieHeadRef} position={[0, 0, 0]}>
-            <mesh
-                visible
-                geometry={nodes['Base'].geometry}
-                position={nodes['Base'].position}
-                scale={nodes['Base'].scale}>
-                <meshStandardMaterial
-                    attach="material"
-                    color="green"
-                    roughness={0.1}
-                    metalness={0.1}
-                />
-            </mesh>
-            <mesh
-                visible
-                geometry={nodes['Left_Eye'].geometry}
-                position={nodes['Left_Eye'].position}
-                scale={nodes['Left_Eye'].scale}>
-                <meshStandardMaterial
-                    attach="material"
-                    color="red"
-                    roughness={0.1}
-                    metalness={0.1}
-                />
-            </mesh>
-            <mesh
-                visible
-                geometry={nodes['Right_Eye'].geometry}
-                position={nodes['Right_Eye'].position}
-                scale={nodes['Right_Eye'].scale}>
-                <meshStandardMaterial
-                    attach="material"
-                    color="red"
-                    roughness={0.1}
-                    metalness={0.1}
-                />
-            </mesh>
+        <group ref={zombieHeadRef} position={[0, -2, 0]}>
+            <primitive object={nodes['Scene']} />
         </group>
     );
 };

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import ZombieHeadOne from '../components/Heads/ZombieHeadOne';
 import ZombieHeadTwo from '../components/Heads/ZombieHeadTwo';
 import ZombieBodyOne from '../components/Bodies/ZombieBodyOne';
@@ -8,10 +8,13 @@ import Layout from '../components/layout';
 import { Canvas } from 'react-three-fiber';
 import dynamic from 'next/dynamic';
 import styles from './index.module.css';
+import Quiz from '../components/Quiz/Quiz';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
 export default function Home() {
+    const [questionIndex, setQuestionIndex] = useState(0);
+
     return (
         <Layout>
             <Head>
@@ -19,23 +22,20 @@ export default function Home() {
                 <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
             <main>
-                <Canvas style={{ height: '100vh' }}>
-                    <ambientLight intensity={0.5} />
-                    <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-                    <pointLight position={[-10, -10, -10]} />
-                    <Camera />
-                    <Suspense fallback={null}>
-                        <ZombieHeadOne />
-                        <ZombieHeadTwo />
-                        <ZombieBodyOne />
-                        <ZombieBodyTwo />
-                    </Suspense>
-                </Canvas>
-                <div className={styles.question}>
-                    <div>QUESTION 1!!!!</div>
-                    <div>PICK A FAVORITE HALLOWEEN CANDY</div>
-                    <div>- CHOCOLATE</div>
-                    <div>- BRAINS</div>
+                <div>
+                    <Canvas style={{ height: '100vh' }}>
+                        <ambientLight intensity={0.5} />
+                        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+                        <pointLight position={[-10, -10, -10]} />
+                        <Camera />
+                        <Suspense fallback={null}>
+                            <ZombieHeadOne />
+                            <ZombieHeadTwo />
+                        </Suspense>
+                    </Canvas>
+                </div>
+                <div className={styles['quiz-container']}>
+                    <Quiz questionIndex={questionIndex} />
                 </div>
             </main>
         </Layout>
