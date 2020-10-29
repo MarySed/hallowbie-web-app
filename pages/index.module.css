@@ -6,5 +6,8 @@
     top: 50vh;
     left: 0px;
     right: 0px;
-    /* width: 300px; */
+}
+
+.in-progress {
+    display: none;
 }

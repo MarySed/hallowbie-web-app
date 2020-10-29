@@ -5,18 +5,21 @@
 .quiz-header {
     font-family: 'Creepster', serif;
     font-size: 100px;
-    color: beige;
-    animation: redShadow 4500ms ease infinite;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: red;
-    margin-top: -20px;
+    color: white;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 75%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-top: -10vh;
+    animation: flicker 0.5s ease-in infinite;
 }
 
 .quiz-button {
     font-family: 'Arvo', serif;
     width: 20vw;
-    border: 3px solid crimson;
-    color: crimson;
+    border: 3px solid #ff5e0044;
+    color: #ff5e0044;
     display: inline-block;
     margin: 20px;
     padding: 20px;
@@ -25,20 +28,23 @@
 }
 
 .quiz-button:hover {
-    box-shadow: 3px 7px 5px rgba(251, 12, 12, 0.9);
     transition: ease-in 0.35s;
-    color: red;
-    border-color: red;
+    color: #ff7518;
+    border-color: #ff7518;
 }
 
-@keyframes redShadow {
+@keyframes flicker {
     0% {
-        text-shadow: 3px 7px 5px rgba(251, 12, 12, 0.9);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 75%);
     }
     50% {
-        text-shadow: 5px 6px 6px rgba(251, 12, 12, 0.6);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 70%);
+    }
+
+    75% {
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 68%);
     }
     100% {
-        text-shadow: 4px 8px 6.5px rgba(251, 12, 12, 1);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 70%);
     }
 }
