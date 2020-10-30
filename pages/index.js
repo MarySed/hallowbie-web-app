@@ -10,6 +10,7 @@ import dynamic from 'next/dynamic';
 import styles from './index.module.css';
 import Quiz from '../components/Quiz/Quiz';
 import Answer from '../components/Quiz/Answer';
+import Arrow from '../components/Accessories/Arrow';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
@@ -60,6 +61,7 @@ export default function Home() {
                         <Suspense fallback={null}>
                             {zombieResult()}
                             <Sunglasses />
+                            <Arrow />
                         </Suspense>
                         <Plate />
                     </Canvas>
