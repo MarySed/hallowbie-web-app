@@ -10,7 +10,65 @@
     -moz-background-clip: text;
     background-clip: text;
     margin-top: -10vh;
-    animation: flicker 1.5s ease-in-out infinite;
+    animation: glitch 4s ease-in-out infinite;
+    user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+}
+
+@keyframes glitch {
+    0% {
+        transform: none;
+        opacity: 0.25;
+    }
+    7% {
+        transform: translate(-2px, -3px);
+        opacity: 0.5;
+    }
+    10% {
+        transform: none;
+        opacity: 0.25;
+    }
+    27% {
+        transform: none;
+        opacity: 0.25;
+    }
+    30% {
+        transform: translate(-5px, -2px);
+        opacity: 0.5;
+    }
+    35% {
+        transform: none;
+        opacity: 0.5;
+    }
+    52% {
+        transform: none;
+        opacity: 0.25;
+    }
+    55% {
+        transform: translate(-5px, -1px);
+        opacity: 0.5;
+    }
+    50% {
+        transform: none;
+        opacity: 0.25;
+    }
+    72% {
+        transform: none;
+        opacity: 0.5;
+    }
+    75% {
+        transform: translate(-2px, -6px);
+        opacity: 0.5;
+    }
+    80% {
+        transform: none;
+        opacity: 0.25;
+    }
+    100% {
+        transform: none;
+        opacity: 0.25;
+    }
 }
 
 .quiz-button {
@@ -22,6 +80,10 @@
     margin: 20px;
     padding: 20px;
     text-transform: uppercase;
+    user-select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    cursor: pointer;
 }
 
 .quiz-button:hover {
@@ -30,23 +92,16 @@
     border-color: #ff7518;
 }
 
-@keyframes flicker {
+@keyframes fadeIn {
     0% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 90%);
-    }
-    50% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 80%);
-    }
-
-    75% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 75%);
+        opacity: 0.2;
     }
     100% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 80%);
+        opacity: 1;
     }
 }
 
-/* Answer styles because I'm lazy */
+/* Answer styles here because I'm lazy */
 
 .answer {
     font-family: 'Staatliches', serif;
