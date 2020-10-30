@@ -8,14 +8,9 @@ const Sunglasses = () => {
     const zombieHeadRef = useRef();
 
     const { nodes } = useLoader(GLTFLoader, '/models/sunglasses.glb');
-    console.log(nodes);
 
     return (
-        <group
-            ref={zombieHeadRef}
-            position={[0, -2, 0]}
-            scale={[0.002, 0.0025, 0.0025]}
-            position={[-0.06, 1.7, 1.2]}>
+        <group ref={zombieHeadRef} scale={[0.002, 0.0025, 0.0025]} position={[-0.06, 1.6, 1.3]}>
             <primitive object={nodes['OSG_Scene']} />
         </group>
     );
