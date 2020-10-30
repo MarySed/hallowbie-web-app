@@ -8,7 +8,6 @@ const ZombieHeadTwo = () => {
     const zombieHeadRef = useRef();
 
     const { nodes } = useLoader(GLTFLoader, '/models/base_male_head.glb');
-    console.log(nodes);
 
     return (
         <group ref={zombieHeadRef} position={[0, 0, 0]}>

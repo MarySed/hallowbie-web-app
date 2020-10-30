@@ -14,6 +14,7 @@ import Arrow from '../components/Accessories/Arrow';
 import Nyan from '../components/Accessories/Nyan';
 import TopHat from '../components/Accessories/TopHat';
 import Heart from '../components/Accessories/Heart';
+import WitchHat from '../components/Accessories/WitchHat';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
@@ -69,7 +70,8 @@ export default function Home() {
                             <Nyan />
                             <Arrow />
                             {/* <TopHat /> */}
-                            <Heart />
+                            {/* <Heart /> */}
+                            <WitchHat />
                         </Suspense>
                         <Plate />
                     </Canvas>
