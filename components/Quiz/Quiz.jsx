@@ -10,7 +10,7 @@ const quizContent = [
         answer_two_val: 20,
     },
     {
-        quesiton: 'Which actor was a scarier version of Pennywise in IT',
+        quesiton: 'Choose a Pennywise',
         answer_one: 'Bill Skarsgård',
         answer_one_val: 10,
         answer_two: 'Tim Curry',
@@ -24,8 +24,6 @@ const quizContent = [
         answer_two_val: 20,
     },
 ];
-
-// TODO: Make less ugly :(
 
 const Quiz = ({ questionIndex, handleAnswer }) => {
     return (
