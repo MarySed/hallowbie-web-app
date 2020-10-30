@@ -13,6 +13,7 @@ import Answer from '../components/Quiz/Answer';
 import Arrow from '../components/Accessories/Arrow';
 import Nyan from '../components/Accessories/Nyan';
 import TopHat from '../components/Accessories/TopHat';
+import Heart from '../components/Accessories/Heart';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
@@ -22,6 +23,7 @@ export default function Home() {
     const [questionIndex, setQuestionIndex] = useState(0);
     // Generate zombie based on user score after answering all questions
     const [score, setScore] = useState(0);
+    const [lighting, setLighting] = useState('white');
 
     const handleAnswer = (value) => {
         setScore(score + value);
@@ -51,21 +53,23 @@ export default function Home() {
                         questionIndex === QUIZ_LENGTH ? styles.complete : styles['in-progress']
                     }>
                     <Canvas className={styles.canvas}>
-                        <ambientLight intensity={0.8} />
+                        <ambientLight intensity={0.8} color={lighting} />
                         <spotLight
                             position={[10, 10, 10]}
                             angle={0.15}
                             penumbra={1}
-                            intensity={0.4}
+                            intensity={0.5}
+                            color={lighting}
                         />
-                        <pointLight position={[-10, -10, -10]} color="white" />
+                        <pointLight position={[-10, -10, -10]} color={lighting} intensity={0.5} />
                         <Camera />
                         <Suspense fallback={null}>
                             {zombieResult()}
                             <Sunglasses />
                             <Nyan />
                             <Arrow />
-                            <TopHat />
+                            {/* <TopHat /> */}
+                            <Heart />
                         </Suspense>
                         <Plate />
                     </Canvas>
