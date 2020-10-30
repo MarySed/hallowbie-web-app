@@ -12,6 +12,7 @@ import Quiz from '../components/Quiz/Quiz';
 import Answer from '../components/Quiz/Answer';
 import Arrow from '../components/Accessories/Arrow';
 import Nyan from '../components/Accessories/Nyan';
+import TopHat from '../components/Accessories/TopHat';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
@@ -64,6 +65,7 @@ export default function Home() {
                             <Sunglasses />
                             <Nyan />
                             <Arrow />
+                            <TopHat />
                         </Suspense>
                         <Plate />
                     </Canvas>
