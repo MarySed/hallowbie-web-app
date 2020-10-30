@@ -19,17 +19,19 @@ import WitchHat from '../components/Accessories/WitchHat';
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
 const QUIZ_LENGTH = 3;
+const RANDOM_PROP = Math.floor(Math.random() * 6) + 1; // generate random number between 1 and 6 for props
 
 export default function Home() {
     const [questionIndex, setQuestionIndex] = useState(0);
-    // Generate zombie based on user score after answering all questions
-    const [score, setScore] = useState(0);
-    const [lighting, setLighting] = useState('white');
+    const [score, setScore] = useState(0); // generate zombie based on user score after answering all questions
+    const [lighting, setLighting] = useState('white'); // TODO: maybe use this to have randomized lighting....
 
     const handleAnswer = (value) => {
         setScore(score + value);
         setQuestionIndex(questionIndex + 1);
     };
+
+    console.log(RANDOM_PROP);
 
     // TODO: Update scores lol
     const zombieResult = () => {
@@ -66,12 +68,12 @@ export default function Home() {
                         <Camera />
                         <Suspense fallback={null}>
                             {zombieResult()}
-                            <Sunglasses />
-                            <Nyan />
-                            <Arrow />
-                            {/* <TopHat /> */}
-                            {/* <Heart /> */}
-                            <WitchHat />
+                            {RANDOM_PROP === 1 && <Sunglasses />}
+                            {RANDOM_PROP === 2 && <Nyan />}
+                            {RANDOM_PROP === 3 && <Arrow />}
+                            {RANDOM_PROP === 4 && <TopHat />}
+                            {RANDOM_PROP === 5 && <Heart />}
+                            {RANDOM_PROP === 6 && <WitchHat />}
                         </Suspense>
                         <Plate />
                     </Canvas>
