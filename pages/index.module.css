@@ -6,8 +6,20 @@
     top: 50vh;
     left: 0px;
     right: 0px;
+    outline: none;
+}
+
+.canvas {
+    outline: none;
+    overflow: hidden;
 }
 
 .in-progress {
+    height: 100vh;
     display: none;
+}
+
+.complete {
+    height: 100vh;
+    outline: none;
 }

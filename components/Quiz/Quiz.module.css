@@ -10,18 +10,17 @@
     -moz-background-clip: text;
     background-clip: text;
     margin-top: -10vh;
-    animation: flicker 0.5s ease-in infinite;
+    animation: flicker 1.5s ease-in-out infinite;
 }
 
 .quiz-button {
     font-family: 'Arvo', serif;
     width: 20vw;
-    border: 3px solid #ff5e0044;
+    border: 1px solid #ff5e0044;
     color: #ff5e0044;
     display: inline-block;
     margin: 20px;
     padding: 20px;
-    border-radius: 30px;
     text-transform: uppercase;
 }
 
@@ -33,16 +32,44 @@
 
 @keyframes flicker {
     0% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 75%);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 90%);
     }
     50% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 70%);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 80%);
     }
 
     75% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 68%);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 75%);
     }
     100% {
-        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 70%);
+        background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 80%);
     }
+}
+
+/* Answer styles because I'm lazy */
+
+.answer {
+    font-family: 'Staatliches', serif;
+    color: #ff7518;
+    font-size: 90px;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #ff7518 75%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    margin-top: -5vh;
+    animation: flicker 0.5s ease-in infinite;
+}
+
+.alien {
+    color: #2c3e50;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #9074a5 75%);
+    animation: none;
+    font-size: 8rem;
+}
+
+.classic {
+    color: #2c3e50;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #2bff18 75%);
+    animation: none;
 }

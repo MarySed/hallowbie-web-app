@@ -18,7 +18,7 @@ const Camera = () => {
         }
     });
 
-    return <orbitControls ref={cameraRef} args={[camera, domElement]} />;
+    return <orbitControls ref={cameraRef} args={[camera, domElement]} panSpeed={4} />;
 };
 
 export default Camera;

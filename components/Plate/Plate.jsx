@@ -1,15 +1,15 @@
 import React, { useRef } from 'react';
 
-const ZombieBodyTwo = () => {
-    const zombieBodyRef = useRef();
+const Plate = () => {
+    const plateRef = useRef();
 
     return (
-        <group ref={zombieBodyRef} position={[3, 1.6, 0]}>
+        <group ref={plateRef} position={[0, 0.5, 0]} rotation={[0, 0, 0]}>
             <mesh visible>
-                <boxBufferGeometry args={[1, 2, 1]} />
+                <cylinderBufferGeometry args={[1.5, 1, 0.2, 12]} />
                 <meshStandardMaterial
                     attach="material"
-                    color="blue"
+                    color="white"
                     roughness={0.1}
                     metalness={0.1}
                 />
@@ -18,4 +18,4 @@ const ZombieBodyTwo = () => {
     );
 };
 
-export default ZombieBodyTwo;
+export default Plate;
