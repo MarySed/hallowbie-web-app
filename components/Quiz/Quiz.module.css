@@ -124,6 +124,11 @@
     font-style: italic;
 }
 
+.subtitle-devil {
+    color: red;
+    margin-top: -100px;
+}
+
 .subtitle-alien {
     color: #9074a5;
     margin-top: -100px;
@@ -131,6 +136,14 @@
 
 .subtitle-classic {
     color: green;
+    margin-top: -65px;
+}
+
+.devil {
+    color: red;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #950101 75%);
+    animation: none;
+    font-size: 8rem;
     margin-top: -65px;
 }
 

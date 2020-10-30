@@ -15,16 +15,18 @@ import Nyan from '../components/Accessories/Nyan';
 import TopHat from '../components/Accessories/TopHat';
 import Heart from '../components/Accessories/Heart';
 import WitchHat from '../components/Accessories/WitchHat';
+import Horns from '../components/Accessories/Horns';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
 const QUIZ_LENGTH = 3;
-const RANDOM_PROP = Math.floor(Math.random() * 6) + 1; // generate random number between 1 and 6 for props
+const RANDOM_PROP = Math.floor(Math.random() * 7) + 1; // generate random number between 1 and 7 for props
 
 export default function Home() {
     const [questionIndex, setQuestionIndex] = useState(0);
     const [score, setScore] = useState(0); // generate zombie based on user score after answering all questions
-    const [lighting, setLighting] = useState('white'); // TODO: maybe use this to have randomized lighting....
+
+    const lighting = RANDOM_PROP === 7 ? 'red' : 'white';
 
     const handleAnswer = (value) => {
         setScore(score + value);
@@ -74,6 +76,7 @@ export default function Home() {
                             {RANDOM_PROP === 4 && <TopHat />}
                             {RANDOM_PROP === 5 && <Heart />}
                             {RANDOM_PROP === 6 && <WitchHat />}
+                            {RANDOM_PROP === 7 && <Horns />}
                         </Suspense>
                         <Plate />
                     </Canvas>

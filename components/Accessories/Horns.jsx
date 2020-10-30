@@ -2,18 +2,18 @@ import React, { useRef } from 'react';
 import { useLoader } from 'react-three-fiber';
 let GLTFLoader;
 
-const Sunglasses = () => {
+const Horns = () => {
     GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader;
 
-    const sunglassesRef = useRef();
+    const hornsRef = useRef();
 
-    const { nodes } = useLoader(GLTFLoader, '/models/sunglasses.glb');
+    const { nodes } = useLoader(GLTFLoader, '/models/horns.glb');
 
     return (
-        <group ref={sunglassesRef} scale={[0.002, 0.0025, 0.0025]} position={[-0.06, 1.6, 1.3]}>
+        <group ref={hornsRef} scale={[0.006, 0.006, 0.006]} position={[0, 2.2, 0.6]}>
             <primitive object={nodes['OSG_Scene']} />
         </group>
     );
 };
 
-export default Sunglasses;
+export default Horns;

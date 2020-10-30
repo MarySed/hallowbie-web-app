@@ -5,12 +5,12 @@ let GLTFLoader;
 const TopHat = () => {
     GLTFLoader = require('three/examples/jsm/loaders/GLTFLoader').GLTFLoader;
 
-    const zombieHeadRef = useRef();
+    const tophatRef = useRef();
 
     const { nodes } = useLoader(GLTFLoader, '/models/tophat.glb');
 
     return (
-        <group ref={zombieHeadRef} scale={[0.2, 0.2, 0.2]} position={[-0.06, 2, 0.3]}>
+        <group ref={tophatRef} scale={[0.2, 0.2, 0.2]} position={[-0.06, 2, 0.3]}>
             <primitive object={nodes['OSG_Scene']} />
         </group>
     );
