@@ -3,6 +3,7 @@ import { Suspense, useState } from 'react';
 import ZombieHeadOne from '../components/Heads/ZombieHeadOne';
 import ZombieHeadTwo from '../components/Heads/ZombieHeadTwo';
 import Plate from '../components/Plate/Plate';
+import Sunglasses from '../components/Accessories/Sunglasses';
 import Layout from '../components/layout';
 import { Canvas } from 'react-three-fiber';
 import dynamic from 'next/dynamic';
@@ -56,7 +57,10 @@ export default function Home() {
                         />
                         <pointLight position={[-10, -10, -10]} color="white" />
                         <Camera />
-                        <Suspense fallback={null}>{zombieResult()}</Suspense>
+                        <Suspense fallback={null}>
+                            {zombieResult()}
+                            <Sunglasses />
+                        </Suspense>
                         <Plate />
                     </Canvas>
                 </div>
