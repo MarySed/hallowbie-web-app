@@ -116,6 +116,24 @@
     animation: flicker 0.5s ease-in infinite;
 }
 
+.subtitle {
+    line-height: 0;
+    font-family: 'Arvo';
+    font-size: 18px;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.subtitle-alien {
+    color: #9074a5;
+    margin-top: -100px;
+}
+
+.subtitle-classic {
+    color: green;
+    margin-top: -65px;
+}
+
 .alien {
     color: #2c3e50;
     background-image: linear-gradient(to bottom, #2c3e50 0%, #9074a5 75%);

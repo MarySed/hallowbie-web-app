@@ -81,7 +81,7 @@ export default function Home() {
                 <div className={styles['quiz-container']}>
                     {/* Display result when you complete quiz */}
                     {questionIndex === QUIZ_LENGTH ? (
-                        <Answer score={score} />
+                        <Answer score={score} randomProp={RANDOM_PROP} />
                     ) : (
                         <Quiz questionIndex={questionIndex} handleAnswer={handleAnswer} />
                     )}

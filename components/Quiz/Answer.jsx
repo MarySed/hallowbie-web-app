@@ -5,16 +5,46 @@ import styles from './Quiz.module.css';
 const ZOMBIE_RES_ALIEN = 'Actually an Alien';
 const ZOMBIE_RES_CLASSIC = 'The Classic';
 
-const Answer = ({ score }) => {
+const Answer = ({ score, randomProp }) => {
     const zombieName = score <= 30 ? ZOMBIE_RES_ALIEN : ZOMBIE_RES_CLASSIC;
+
+    const zombieSubtitle = () => {
+        if (randomProp === 1) {
+            return 'Stay out of the sun';
+        }
+        if (randomProp === 2) {
+            return 'A cat and a poptart?';
+        }
+        if (randomProp === 3) {
+            return 'I thought this only happened in Skyrim';
+        }
+        if (randomProp === 4) {
+            return 'A gentleman';
+        }
+        if (randomProp === 5) {
+            return 'Your heart is in the right place';
+        }
+        if (randomProp === 6) {
+            return 'Yer a witch, Harry';
+        }
+    };
     return (
-        <h1
-            className={classNames(styles.answer, {
-                [styles.alien]: zombieName === ZOMBIE_RES_ALIEN,
-                [styles.classic]: zombieName === ZOMBIE_RES_CLASSIC,
-            })}>
-            {zombieName}
-        </h1>
+        <>
+            <h1
+                className={classNames(styles.answer, {
+                    [styles.alien]: zombieName === ZOMBIE_RES_ALIEN,
+                    [styles.classic]: zombieName === ZOMBIE_RES_CLASSIC,
+                })}>
+                {zombieName}
+            </h1>
+            <p
+                className={classNames(styles.subtitle, {
+                    [styles['subtitle-alien']]: zombieName === ZOMBIE_RES_ALIEN,
+                    [styles['subtitle-classic']]: zombieName === ZOMBIE_RES_CLASSIC,
+                })}>
+                {zombieSubtitle()}
+            </p>
+        </>
     );
 };
 
