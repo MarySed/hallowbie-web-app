@@ -1,5 +1,12 @@
 # Hallowbie! It's Halloween!
 
+Which zombie are you?
+[Find out](https://hallowbie-web-app.vercel.app/)!
+
+### Credits
+
+Zombies created by [@anderson-oki](https://github.com/anderson-oki)! Lazy React-Three-Fiber rendering by [@MarySed](https://github.com/MarySed).
+
 Thank you to the following artists for providing some of the props used in this project:
 
 -   [Wewwuworks](https://sketchfab.com/Ensign_Crusher)
