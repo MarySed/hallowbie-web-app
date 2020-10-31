@@ -16,6 +16,7 @@ import TopHat from '../components/Accessories/TopHat';
 import Heart from '../components/Accessories/Heart';
 import WitchHat from '../components/Accessories/WitchHat';
 import Horns from '../components/Accessories/Horns';
+import ZombieHeadThree from '../components/Heads/ZombieHeadThree';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
@@ -37,12 +38,16 @@ export default function Home() {
 
     // TODO: Update scores lol
     const zombieResult = () => {
-        if (score <= 30) {
+        if (score <= 15) {
             return <ZombieHeadOne />;
         }
 
-        if (score <= 60) {
+        if (score <= 21) {
             return <ZombieHeadTwo />;
+        }
+
+        if (score <= 41) {
+            return <ZombieHeadThree />;
         }
     };
 

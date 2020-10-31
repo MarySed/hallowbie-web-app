@@ -4,15 +4,28 @@ import styles from './Quiz.module.css';
 
 const ZOMBIE_RES_ALIEN = 'Actually an Alien';
 const ZOMBIE_RES_CLASSIC = 'The Classic';
+const ZOMBIE_RES_SKULL = 'A Little Decayed';
 const ZOMBIE_RES_DEVIL = 'Devil x Zombie';
 
 const Answer = ({ score, randomProp }) => {
     const zombieName = () => {
-        if (randomProp === 7) {
-            return ZOMBIE_RES_DEVIL;
-        }
+        // if (randomProp === 7) {
+        //     return ZOMBIE_RES_DEVIL;
+        // }
 
-        return score <= 30 ? ZOMBIE_RES_ALIEN : ZOMBIE_RES_CLASSIC;
+        // if (score <= 15) {
+        //     return ZOMBIE_RES_ALIEN;
+        // }
+
+        // if (score <= 21) {
+        //     return ZOMBIE_RES_CLASSIC;
+        // }
+
+        // if (score <= 41) {
+        //     return ZOMBIE_RES_SKULL;
+        // }
+
+        return ZOMBIE_RES_SKULL;
     };
 
     const zombieSubtitle = () => {
@@ -44,6 +57,7 @@ const Answer = ({ score, randomProp }) => {
                 className={classNames(styles.answer, {
                     [styles.alien]: zombieName() === ZOMBIE_RES_ALIEN,
                     [styles.classic]: zombieName() === ZOMBIE_RES_CLASSIC,
+                    [styles.skull]: zombieName() === ZOMBIE_RES_SKULL,
                     [styles.devil]: zombieName() === ZOMBIE_RES_DEVIL,
                 })}>
                 {zombieName()}
@@ -52,6 +66,7 @@ const Answer = ({ score, randomProp }) => {
                 className={classNames(styles.subtitle, {
                     [styles['subtitle-alien']]: zombieName() === ZOMBIE_RES_ALIEN,
                     [styles['subtitle-classic']]: zombieName() === ZOMBIE_RES_CLASSIC,
+                    [styles['subtitle-skull']]: zombieName() === ZOMBIE_RES_SKULL,
                     [styles['subtitle-devil']]: zombieName() === ZOMBIE_RES_DEVIL,
                 })}>
                 {zombieSubtitle()}

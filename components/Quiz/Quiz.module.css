@@ -132,6 +132,11 @@
     font-style: italic;
 }
 
+.subtitle-skull {
+    color: rgb(168, 168, 168);
+    margin-top: -100px;
+}
+
 .subtitle-devil {
     color: red;
     margin-top: -100px;
@@ -144,6 +149,14 @@
 
 .subtitle-classic {
     color: green;
+    margin-top: -65px;
+}
+
+.skull {
+    color: red;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #ffffff 75%);
+    animation: none;
+    font-size: 8rem;
     margin-top: -65px;
 }
 
