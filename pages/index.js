@@ -92,7 +92,13 @@ export default function Home() {
                 <div className={styles['quiz-container']}>
                     {/* Display result when you complete quiz */}
                     {questionIndex === QUIZ_LENGTH ? (
-                        <Answer score={score} randomProp={RANDOM_PROP} />
+                        <>
+                            <Answer score={score} randomProp={RANDOM_PROP} />
+                            <div className={styles.tutorial}>
+                                P.S. you can move the model and zoom in on it with your mouse, or
+                                pan with your keyboard.
+                            </div>
+                        </>
                     ) : (
                         <Quiz questionIndex={questionIndex} handleAnswer={handleAnswer} />
                     )}

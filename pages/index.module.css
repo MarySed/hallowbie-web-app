@@ -10,6 +10,14 @@
     padding: 200px;
 }
 
+.tutorial {
+    color: white;
+    opacity: 0.6;
+    position: absolute;
+    bottom: 2vh;
+    left: 2vw;
+}
+
 .canvas {
     outline: none;
 }
