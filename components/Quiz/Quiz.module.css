@@ -71,6 +71,15 @@
     }
 }
 
+.quiz-wrapper {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: 0;
+}
+
 .quiz-button {
     font-family: 'Arvo', serif;
     width: 20vw;

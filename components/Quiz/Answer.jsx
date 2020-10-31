@@ -39,7 +39,7 @@ const Answer = ({ score, randomProp }) => {
         }
     };
     return (
-        <>
+        <div className={styles['quiz-wrapper']}>
             <h1
                 className={classNames(styles.answer, {
                     [styles.alien]: zombieName() === ZOMBIE_RES_ALIEN,
@@ -56,7 +56,7 @@ const Answer = ({ score, randomProp }) => {
                 })}>
                 {zombieSubtitle()}
             </p>
-        </>
+        </div>
     );
 };
 

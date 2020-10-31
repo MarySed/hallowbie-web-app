@@ -27,7 +27,7 @@ const quizContent = [
 
 const Quiz = ({ questionIndex, handleAnswer }) => {
     return (
-        <div>
+        <div className={styles['quiz-wrapper']}>
             {questionIndex < quizContent.length ? (
                 <>
                     <div
