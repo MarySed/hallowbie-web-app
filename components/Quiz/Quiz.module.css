@@ -130,11 +130,7 @@
     font-size: 18px;
     text-transform: uppercase;
     font-style: italic;
-}
-
-.subtitle-skull {
-    color: rgb(168, 168, 168);
-    margin-top: -100px;
+    color: white;
 }
 
 .subtitle-devil {
@@ -152,12 +148,14 @@
     margin-top: -65px;
 }
 
-.skull {
-    color: red;
-    background-image: linear-gradient(to bottom, #2c3e50 0%, #ffffff 75%);
-    animation: none;
-    font-size: 8rem;
-    margin-top: -65px;
+.subtitle-skull {
+    color: rgb(168, 168, 168);
+    margin-top: -70px;
+}
+
+.subtitle-lady {
+    color: rgb(246, 40, 202);
+    margin-top: -70px;
 }
 
 .devil {
@@ -179,4 +177,20 @@
     color: #2c3e50;
     background-image: linear-gradient(to bottom, #2c3e50 0%, #2bff18 75%);
     animation: none;
+}
+
+.skull-answer {
+    color: white;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #ffffff 75%) !important;
+    animation: none;
+    font-size: 8rem;
+    margin-top: -65px;
+}
+
+.lady-answer {
+    color: white;
+    background-image: linear-gradient(to bottom, #2c3e50 0%, #dc66ec 75%) !important;
+    animation: none;
+    font-size: 8rem;
+    margin-top: -65px;
 }

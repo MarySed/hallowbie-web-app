@@ -5,27 +5,30 @@ import styles from './Quiz.module.css';
 const ZOMBIE_RES_ALIEN = 'Actually an Alien';
 const ZOMBIE_RES_CLASSIC = 'The Classic';
 const ZOMBIE_RES_SKULL = 'A Little Decayed';
+const ZOMBIE_RES_LADY = 'Girl, Fabulous';
 const ZOMBIE_RES_DEVIL = 'Devil x Zombie';
 
 const Answer = ({ score, randomProp }) => {
     const zombieName = () => {
-        // if (randomProp === 7) {
-        //     return ZOMBIE_RES_DEVIL;
-        // }
+        if (randomProp === 7) {
+            return ZOMBIE_RES_DEVIL;
+        }
 
-        // if (score <= 15) {
-        //     return ZOMBIE_RES_ALIEN;
-        // }
+        if (score <= 25) {
+            return ZOMBIE_RES_ALIEN;
+        }
 
-        // if (score <= 21) {
-        //     return ZOMBIE_RES_CLASSIC;
-        // }
+        if (score <= 35) {
+            return ZOMBIE_RES_CLASSIC;
+        }
 
-        // if (score <= 41) {
-        //     return ZOMBIE_RES_SKULL;
-        // }
+        if (score <= 41) {
+            return ZOMBIE_RES_SKULL;
+        }
 
-        return ZOMBIE_RES_SKULL;
+        if (score <= 50) {
+            return ZOMBIE_RES_LADY;
+        }
     };
 
     const zombieSubtitle = () => {
@@ -57,7 +60,8 @@ const Answer = ({ score, randomProp }) => {
                 className={classNames(styles.answer, {
                     [styles.alien]: zombieName() === ZOMBIE_RES_ALIEN,
                     [styles.classic]: zombieName() === ZOMBIE_RES_CLASSIC,
-                    [styles.skull]: zombieName() === ZOMBIE_RES_SKULL,
+                    [styles['skull-answer']]: zombieName() === ZOMBIE_RES_SKULL,
+                    [styles['lady-answer']]: zombieName() === ZOMBIE_RES_LADY,
                     [styles.devil]: zombieName() === ZOMBIE_RES_DEVIL,
                 })}>
                 {zombieName()}
@@ -67,6 +71,7 @@ const Answer = ({ score, randomProp }) => {
                     [styles['subtitle-alien']]: zombieName() === ZOMBIE_RES_ALIEN,
                     [styles['subtitle-classic']]: zombieName() === ZOMBIE_RES_CLASSIC,
                     [styles['subtitle-skull']]: zombieName() === ZOMBIE_RES_SKULL,
+                    [styles['subtitle-lady']]: zombieName() === ZOMBIE_RES_LADY,
                     [styles['subtitle-devil']]: zombieName() === ZOMBIE_RES_DEVIL,
                 })}>
                 {zombieSubtitle()}

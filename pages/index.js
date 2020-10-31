@@ -17,10 +17,11 @@ import Heart from '../components/Accessories/Heart';
 import WitchHat from '../components/Accessories/WitchHat';
 import Horns from '../components/Accessories/Horns';
 import ZombieHeadThree from '../components/Heads/ZombieHeadThree';
+import ZombieHeadFour from '../components/Heads/ZombieHeadFour';
 
 const Camera = dynamic(() => import('../components/Camera/Camera'), { ssr: false });
 
-const QUIZ_LENGTH = 3;
+const QUIZ_LENGTH = 5;
 const RANDOM_PROP = Math.floor(Math.random() * 7) + 1; // generate random number between 1 and 7 for props
 
 export default function Home() {
@@ -34,20 +35,22 @@ export default function Home() {
         setQuestionIndex(questionIndex + 1);
     };
 
-    console.log(RANDOM_PROP);
-
     // TODO: Update scores lol
     const zombieResult = () => {
-        if (score <= 15) {
+        if (score <= 25) {
             return <ZombieHeadOne />;
         }
 
-        if (score <= 21) {
+        if (score <= 35) {
             return <ZombieHeadTwo />;
         }
 
         if (score <= 41) {
             return <ZombieHeadThree />;
+        }
+
+        if (score <= 50) {
+            return <ZombieHeadFour />;
         }
     };
 
