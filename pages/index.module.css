@@ -6,12 +6,12 @@
     left: 0px;
     right: 0px;
     outline: none;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 200px;
 }
 
 .canvas {
     outline: none;
-    overflow: hidden;
 }
 
 .in-progress {
