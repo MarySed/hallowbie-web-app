@@ -24,4 +24,5 @@
     height: 100vh;
     outline: none;
     position: absolute;
+    z-index: 1;
 }
